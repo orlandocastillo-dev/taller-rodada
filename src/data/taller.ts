@@ -116,7 +116,7 @@ export const tiposBici = [
 
 export type TipoBiciId = (typeof tiposBici)[number]["id"];
 
-/** Horario por día de la semana: 0 = domingo ... 6 = sábado. Horas en formato 24 h. */
+// Horario por día de la semana: 0 = domingo ... 6 = sábado
 export const horario: Record<number, { abre: number; cierra: number } | null> = {
   0: { abre: 7, cierra: 13 },
   1: { abre: 8, cierra: 19 },

@@ -3,10 +3,7 @@
 import { useEffect, useState } from "react";
 import { taller } from "@/data/taller";
 
-/**
- * En el celular, después de pasar el inicio aparece una barra fija con las dos acciones
- * que más importan: reservar y escribir por WhatsApp. Se esconde al llegar al formulario.
- */
+// En el celular, después de pasar el inicio aparece una barra fija con las dos acciones que más importan
 export function BarraMovil() {
   const [visible, setVisible] = useState(false);
 

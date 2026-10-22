@@ -43,7 +43,7 @@ export function calcularCotizacion({ tipoBici, servicioIds, express }: QuoteInpu
 }
 
 export function estimarEntrega(minutos: number, express: boolean): QuoteResult["entrega"] {
-  // El banco de trabajo rinde ~4 h efectivas por bici en un día normal; en express se le dedica la jornada completa.
+  // El banco de trabajo rinde ~4 h efectivas por bici en un día normal
   const capacidadDiaria = express ? MINUTOS_JORNADA : MINUTOS_JORNADA / 2;
   const dias = Math.ceil(minutos / capacidadDiaria);
   if (dias <= 1) return "mismo día";

@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { codigoReserva, erroresDe, reservaSchema } from "@/lib/reserva";
 
-/**
- * Límite simple por IP: 5 reservas cada 10 minutos.
- * En memoria es suficiente para una demo; en producción con varias instancias usar Redis (p. ej. Upstash).
- */
+// Límite simple por IP: 5 reservas cada 10 minutos
 const VENTANA_MS = 10 * 60 * 1000;
 const MAXIMO = 5;
 const intentos = new Map<string, number[]>();
