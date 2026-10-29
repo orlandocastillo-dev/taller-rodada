@@ -20,7 +20,7 @@ export function Servicios() {
               {servicios
                 .filter((s) => s.categoria === categoria)
                 .map((s) => (
-                  <li key={s.id} className="grid grid-cols-[1fr_auto] gap-x-6 gap-y-1 py-5 sm:grid-cols-[1fr_90px_140px]">
+                  <li key={s.id} className="-mx-4 grid grid-cols-[1fr_auto] gap-x-6 gap-y-1 rounded-xl px-4 py-5 transition-colors hover:bg-white sm:grid-cols-[1fr_90px_140px]">
                     <div>
                       <p className="text-lg font-semibold">
                         {s.nombre}

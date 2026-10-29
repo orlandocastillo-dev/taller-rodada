@@ -22,10 +22,48 @@ export function Hero() {
               Calcular precio
             </a>
           </div>
+          <dl className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-line pt-6">
+            {[
+              ["15 min", "Diagnóstico gratis"],
+              ["Mismo día", "La mayoría de arreglos"],
+              ["30 días", "De garantía en mano de obra"],
+            ].map(([dato, texto]) => (
+              <div key={dato}>
+                <dt className="sr-only">{texto}</dt>
+                <dd className="heading whitespace-nowrap text-lg sm:text-2xl md:text-3xl">{dato}</dd>
+                <dd className="mt-1 text-sm leading-snug text-steel">{texto}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        <div className="animate-rodar relative -mr-24 md:-mr-40">
-          <Wheel className="w-full max-w-[560px] drop-shadow-[0_24px_30px_rgba(20,33,61,0.18)]" />
+        <div className="relative">
+          <div className="animate-rodar relative -mr-24 md:-mr-40">
+            <Wheel className="w-full max-w-[560px] drop-shadow-[0_24px_30px_rgba(20,33,61,0.18)]" />
+          </div>
+          <p className="ficha-flotante left-0 top-[12%] md:-left-6">
+            <span className="ficha-flotante__icono">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
+            </span>
+            <span>
+              <b>Precio cerrado</b>
+              Antes de tocar una pieza
+            </span>
+          </p>
+          <p className="ficha-flotante bottom-[10%] right-4 [animation-delay:0.25s] md:right-0">
+            <span className="ficha-flotante__icono ficha-flotante__icono--lane">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+                <circle cx="12" cy="13" r="8" />
+                <path d="M12 9v4l2.5 2M9.5 2.5h5" />
+              </svg>
+            </span>
+            <span>
+              <b>Lista hoy</b>
+              Ajustes y despinches
+            </span>
+          </p>
         </div>
       </div>
 

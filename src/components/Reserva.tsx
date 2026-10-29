@@ -246,6 +246,19 @@ function Contenedor({ children }: { children: React.ReactNode }) {
             Te confirmamos por WhatsApp en menos de una hora en horario de atención. Si cambias de planes, solo
             avísanos.
           </p>
+          <ol className="mt-10 space-y-5 border-l-2 border-dashed border-lane pl-6">
+            {[
+              ["Te escribimos", "Confirmamos el día y la hora por WhatsApp."],
+              ["Traes la bici", "Diagnóstico gratis en 15 minutos, frente a ti."],
+              ["Apruebas el precio", "No tocamos nada sin que digas que sí."],
+            ].map(([t, d], i) => (
+              <li key={t} className="relative">
+                <span className="tabular absolute -left-[37px] grid h-6 w-6 place-items-center rounded-full bg-ink text-xs font-bold text-lane">{i + 1}</span>
+                <p className="font-semibold">{t}</p>
+                <p className="text-[15px] text-steel">{d}</p>
+              </li>
+            ))}
+          </ol>
         </div>
         <div>{children}</div>
       </div>

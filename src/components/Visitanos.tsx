@@ -60,13 +60,29 @@ export function Visitanos() {
         </ul>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border-2 border-ink">
+      <div className="mapa relative overflow-hidden rounded-2xl border-2 border-ink bg-[#dfe3e9]">
         <iframe
           title={`Mapa de ubicación de ${taller.nombre}`}
-          src={`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`}
-          className="h-[360px] w-full md:h-full md:min-h-[420px]"
+          src={`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik`}
+          className="h-[380px] w-full md:h-full md:min-h-[440px]"
           loading="lazy"
         />
+        {/* El pin va encima del centro del mapa, que es la dirección del taller */}
+        <span className="mapa__pin" aria-hidden="true">
+          <span>R</span>
+        </span>
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`}
+          target="_blank"
+          rel="noreferrer"
+          className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 rounded-xl bg-ink px-5 py-4 text-paper shadow-lg transition-colors hover:bg-cobalt sm:right-auto"
+        >
+          <span>
+            <b className="block">{taller.nombre}</b>
+            <span className="text-sm text-paper/75">{taller.direccion}</span>
+          </span>
+          <span className="font-semibold text-lane">Cómo llegar →</span>
+        </a>
       </div>
     </section>
   );
