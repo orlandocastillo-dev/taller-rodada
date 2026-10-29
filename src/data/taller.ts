@@ -2,10 +2,10 @@ export const taller = {
   nombre: "Rodada",
   descripcion: "Taller de bicicletas en El Rosario, Barranquilla",
   direccion: "Cra. 44 # 49-30, El Rosario, Barranquilla",
-  telefono: "+57 605 555 0182",
-  whatsapp: "573005550182",
+  telefono: "+57 323 620 5415",
+  whatsapp: "573236205415",
   email: "hola@rodada.co",
-  url: "https://rodada.vercel.app",
+  url: "https://taller-rodada.vercel.app",
   coordenadas: { lat: 10.9876, lng: -74.7874 },
 } as const;
 
